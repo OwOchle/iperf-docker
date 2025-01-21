@@ -18,5 +18,7 @@ COPY --from=build /home/iperf-3.18/bin/ /
 
 EXPOSE 5201
 
+ENV LD_LIBRARY_PATH=/usr/local/lib/
+
 ENTRYPOINT ["iperf3"]
 CMD ["-s"]
